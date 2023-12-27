@@ -1,15 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "../Components/Shared/Navbar";
 
 function Layout() {
     return (
-        <div className="bg-black">
-            <nav className="text-green-500 text-3xl text-center pt-5">
-                <p>I'm Header</p>
-            </nav>
+        <div>
+            <Navbar />
             <Outlet />
-            <footer className="text-green-500 text-3xl text-center pb-5">
-                <p>I'm Footer!</p>
-            </footer>
         </div>
     )
 }
