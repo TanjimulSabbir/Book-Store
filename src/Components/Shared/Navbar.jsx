@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg"
 function Navbar() {
     return (
@@ -6,12 +7,12 @@ function Navbar() {
                 <img src={logo} width="150px" className="object-contain" />
 
                 <ul className="hidden md:flex items-center space-x-6">
-                    <a className="font-semibold cursor-pointer" href="index.html" id="lws-bookStore">
+                    <Link className="font-semibold cursor-pointer" to="/" id="lws-bookStore">
                         <li>Book Store</li>
-                    </a>
-                    <a className="cursor-pointer" href="AddBook.html" id="lws-addBook">
+                    </Link>
+                    <Link className="cursor-pointer" to="/addbook" id="lws-addBook">
                         <li>Add Book</li>
-                    </a>
+                    </Link>
                 </ul>
 
                 <form className="flex items-center">
