@@ -5,18 +5,16 @@ import { useParams } from "react-router-dom";
 import Loading from "./Shared/Loading";
 
 function EditBook() {
-    const [bookInfo, setBookInfo] = useState({featured:false});
+    const [bookInfo, setBookInfo] = useState({ featured: false });
     const [editBook, { data, isLoading, isError, Error, isSuccess }] = useEditBooksMutation();
     const { bookId } = useParams();
     const { data: specifiedBook } = useSpecifiedBookQuery(bookId);
     if (!specifiedBook) return <Loading />
 
-    console.log(specifiedBook, "specifiedBook")
-
     const handleSubmit = (event) => {
         event.preventDefault();
         editBook({ id: bookId, data: bookInfo })
-        toast.success("Successfully added!")
+        toast.success("Successfully the Book edited!")
         console.log(bookInfo)
     }
     return (

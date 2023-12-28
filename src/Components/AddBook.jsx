@@ -8,8 +8,7 @@ function AddBook() {
     const handleSubmit = (event) => {
         event.preventDefault();
         addBook(bookInfo)
-        toast.success("Successfully added!")
-        console.log(bookInfo)
+        toast.success("Successfully Book Added!")
     }
     return (
         <main className="py-6 2xl:px-6">
