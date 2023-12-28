@@ -7,7 +7,7 @@ import NotFoundElement from "./Shared/NotFoundElement";
 
 function Books() {
     let { data: allBooks, isLoading, isError, isSuccess } = useGetBooksQuery();
-    const { isFeatured, all } = useSelector((state) => state.bookReducer)
+    const { isFeatured, searchText } = useSelector((state) => state.bookReducer)
 
     let content = null;
     if (isLoading) content = <Loading />
@@ -16,8 +16,15 @@ function Books() {
 
     if (!isLoading && !isError && allBooks.length > 0) {
         const filteredBooks = isFeatured ? allBooks.filter(book => book.featured) : allBooks;
-        content = filteredBooks.map(book => <BookCard key={book.id} book={book} />);
+        
+        const filteredContent = filteredBooks
+            .filter(book => searchText.trim() === '' || book.name.toLowerCase().includes(searchText.toLowerCase()))
+            .map(book => <BookCard key={book.id} book={book} />);
+    
+        content = filteredContent;
     }
+    
+
 
     return (
         content

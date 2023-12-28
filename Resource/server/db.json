@@ -46,13 +46,22 @@
       "id": 6
     },
     {
-      "featured": false,
+      "featured": true,
       "name": "Tanjimul Islam Sabbir23",
       "author": "Tanjimul Islam Sabbir",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "rating": "5",
       "price": "435",
       "id": 7
+    },
+    {
+      "featured": true,
+      "name": "Tanjimul Islam Sabbir",
+      "author": "Tanjimul Islam Sabbir",
+      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+      "price": "34",
+      "rating": "5",
+      "id": 8
     }
   ]
 }
