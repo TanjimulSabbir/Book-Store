@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/apple-touch-icon.png"
 import { RxCross1 } from "react-icons/rx";
 import { useDispatch } from "react-redux";
 import { searchInput } from "../../Redux/Features/bookSlice";
@@ -20,7 +20,7 @@ function Navbar() {
     return (
         <nav className="py-4 2xl:px-6 bg-teal-500 text-black">
             <div className="container flex items-center justify-between">
-                <img src={logo} width="150px" className="object-contain" />
+                <img src={logo} width="60px" height="60px" className="object-contain" />
 
                 <ul className="hidden md:flex items-center space-x-6">
                     <Link className="font-semibold cursor-pointer" to="/" id="lws-bookStore">
