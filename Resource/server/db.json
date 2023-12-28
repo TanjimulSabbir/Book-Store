@@ -42,11 +42,11 @@
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "price": "876",
       "rating": "5",
-      "featured": "on",
+      "featured": true,
       "id": 6
     },
     {
-      "featured": true,
+      "featured": false,
       "name": "Tanjimul Islam Sabbir23",
       "author": "Tanjimul Islam Sabbir",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
