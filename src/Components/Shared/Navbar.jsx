@@ -11,10 +11,9 @@ function Navbar() {
         event.preventDefault();
         if (event.target.searchBox.value) {
             dispatch(searchInput(""))
-            toast.success("Targeted")
+            toast.success("Dispatched")
         }
         event.target.reset()
-
     }
 
     return (
