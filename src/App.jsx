@@ -1,6 +1,9 @@
 import './App.css'
+import { useGetBooksQuery } from './Redux/Features/Api/apiSlice';
 
 function App() {
+  const { data, isLoading, isError, isSuccess } = useGetBooksQuery();
+  console.log(data,"data from app")
   return (
     <>
       <main className="py-12 px-6 2xl:px-6 container">
