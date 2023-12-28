@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import App from "../App";
 import DynamicMain from "./DynamicMain";
 import AddBook from "../Components/AddBook";
+import EditBook from "../Components/EditBook";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path: "/addbook",
                 element: <AddBook />
+            },
+            {
+                path: "/editbook/:bookId",
+                element: <EditBook />
             },
         ]
     },

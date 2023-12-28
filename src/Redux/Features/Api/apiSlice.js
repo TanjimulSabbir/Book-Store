@@ -18,11 +18,32 @@ export const apiSlice = createApi({
                 body: data,
             }),
             invalidatesTags: ["books"],
-        })
+        }),
+        editBooks: builder.mutation({
+            query: ({ id, data }) => ({
+                url: `/books/${id}`,
+                method: "PATCH",
+                body: data,
+            }),
+            invalidatesTags: ["books"],
+        }),
+        specifiedBook: builder.query({
+            query: (id) => ({
+                url: `/books/${id}`,
+                method: "GET"
+            }),
+        }),
+        deleteBook: builder.mutation({
+            query: (id) => ({
+                url: `/books/${id}`,
+                method: "DELETE"
+            }),
+            invalidatesTags: ["books"],
+        }),
     })
 })
 
-export const { useGetBooksQuery, useAddBooksMutation } = apiSlice;
+export const { useGetBooksQuery, useAddBooksMutation, useEditBooksMutation, useSpecifiedBookQuery, useDeleteBookMutation } = apiSlice;
 
 // import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 

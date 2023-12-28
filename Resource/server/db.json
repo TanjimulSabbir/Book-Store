@@ -33,7 +33,7 @@
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "price": "876",
       "rating": "5",
-      "featured": "on",
+      "featured": false,
       "id": 5
     },
     {
@@ -55,12 +55,12 @@
       "id": 7
     },
     {
-      "featured": true,
-      "name": "His Dark Materials (2019- Present)",
-      "author": "fsdaf",
+      "featured": false,
+      "name": "His Dark Mate",
+      "author": "Tanjimul Islam Sabbir",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
-      "price": "354",
-      "rating": "5",
+      "price": "2",
+      "rating": "4",
       "id": 8
     }
   ]
