@@ -33,7 +33,7 @@
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "price": "876",
       "rating": "5",
-      "featured": false,
+      "featured": true,
       "id": 5
     },
     {
@@ -47,21 +47,12 @@
     },
     {
       "featured": true,
-      "name": "Tanjimul",
+      "name": "Tanjimul Islam Sabbir23",
       "author": "Tanjimul Islam Sabbir",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "rating": "5",
       "price": "435",
       "id": 7
-    },
-    {
-      "featured": false,
-      "name": "His Dark Mate",
-      "author": "Tanjimul Islam Sabbir",
-      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
-      "price": "2",
-      "rating": "4",
-      "id": 8
     }
   ]
 }
