@@ -26,6 +26,42 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "His Dark Materials (2019- Present)",
+      "author": "Tanjimul Islam Sabbir",
+      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+      "price": "876",
+      "rating": "5",
+      "featured": "on",
+      "id": 5
+    },
+    {
+      "name": "His Dark Materials (2019- Present)",
+      "author": "Tanjimul Islam Sabbir",
+      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+      "price": "876",
+      "rating": "5",
+      "featured": "on",
+      "id": 6
+    },
+    {
+      "featured": true,
+      "name": "Tanjimul",
+      "author": "Tanjimul Islam Sabbir",
+      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+      "rating": "5",
+      "price": "435",
+      "id": 7
+    },
+    {
+      "featured": true,
+      "name": "His Dark Materials (2019- Present)",
+      "author": "fsdaf",
+      "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
+      "price": "354",
+      "rating": "5",
+      "id": 8
     }
   ]
 }
