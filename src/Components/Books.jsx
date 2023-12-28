@@ -14,13 +14,11 @@ function Books() {
     if (!isLoading && isError) content = <Error message="There an problem occured" />
     if (!isLoading && !isError && allBooks.length === 0) content = <NotFoundElement />
 
-    if (!isLoading && !isError && allBooks.length > 0) {
+    if (isSuccess) {
         const filteredBooks = isFeatured ? allBooks.filter(book => book.featured) : allBooks;
-
         const filteredContent = filteredBooks
             .filter(book => searchText.trim() === '' || book.name.toLowerCase().includes(searchText.toLowerCase()))
             .map(book => <BookCard key={book.id} book={book} />);
-
         content = filteredContent;
     }
 
