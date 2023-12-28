@@ -34,7 +34,7 @@
       "price": "876",
       "rating": "5",
       "featured": false,
-      "id": 5
+      "id": 4
     },
     {
       "featured": false,
@@ -43,16 +43,16 @@
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "rating": "5",
       "price": "435",
-      "id": 6
+      "id": 5
     },
     {
-      "featured": false,
+      "featured": true,
       "name": "Tanjimul Islam Sabbir",
       "author": "Tanjimul Islam Sabbir",
       "thumbnail": "https://i3.ytimg.com/vi/dD9O8DnIBj4/maxresdefault.jpg",
       "price": "34",
       "rating": "5",
-      "id": 7
+      "id": 6
     }
   ]
 }
