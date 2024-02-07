@@ -2,15 +2,16 @@ import { useState } from 'react'
 import { useAddBooksMutation } from '../Redux/Features/Api/apiSlice';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { addBook } from '../Redux/Features/booksSlice';
 
 function AddBook() {
-    const [addBook, { data, isLoading, isError, Error, isSuccess }] = useAddBooksMutation();
+    // const [addBook, { data, isLoading, isError, Error, isSuccess }] = useAddBooksMutation();
     const [bookInfo, setBookInfo] = useState({ featured: false });
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
         addBook(bookInfo)
-        toast.success("Successfully Book Added!")
+        toast.success("Successfully Book Added")
         navigate("/")
     }
     return (

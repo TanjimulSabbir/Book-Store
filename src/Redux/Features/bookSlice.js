@@ -14,8 +14,7 @@ const bookSlice = createSlice({
         },
         searchInput: (state, action) => {
             state.searchText = action.payload;
-        },
-
+        }
     }
 })
 export const { featuredButton, searchInput } = bookSlice.actions;

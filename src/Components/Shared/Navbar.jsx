@@ -17,7 +17,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="py-4 2xl:px-6 bg-teal-500 text-black">
+        <nav className="py-4 2xl:px-6 bg-sky-400 text-black">
             <div className="container flex items-center justify-between">
                 <img src={logo} width="60px" height="60px" className="object-contain" />
 

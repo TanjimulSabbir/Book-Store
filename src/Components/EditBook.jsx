@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useEditBooksMutation, useSpecifiedBookQuery } from "../Redux/Features/Api/apiSlice";
 import { useParams } from "react-router-dom";
 import Loading from "./Shared/Loading";
+import { editBook, selectedBook } from "../Redux/Features/booksSlice";
+import { useDispatch } from "react-redux";
 
 function EditBook() {
     const [bookInfo, setBookInfo] = useState({ featured: false });
-    const [editBook, { data, isLoading, isError, Error, isSuccess }] = useEditBooksMutation();
-    const { bookId } = useParams();
-    const { data: specifiedBook } = useSpecifiedBookQuery(bookId);
-    if (!specifiedBook) return <Loading />
+    const [specifiedBook, setSpecifiedBook] = useState([]);
+    // const [editBook, { data, isLoading, isError, Error, isSuccess }] = useEditBooksMutation();
+    const { bookId: id } = useParams();
+    // const { data: specifiedBook } = useSpecifiedBookQuery(bookId);
+
+    // if (!specifiedBook) return <Loading />
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        editBook({ id: bookId, data: bookInfo })
+        editBook({ id, data: bookInfo })
         toast.success("Successfully the Book edited!")
         console.log(bookInfo)
     }
@@ -42,7 +46,7 @@ function EditBook() {
                         <div className="space-y-2">
                             <label htmlFor="lws-thumbnail">Image Url</label>
                             <input onChange={(event) => setBookInfo((prev) => ({ ...prev, thumbnail: event.target.value }))}
-                                defaultValue={specifiedBook.thumbnail}
+                                defaultValue={specifiedBook.thumbnail && specifiedBook.thumbnail}
                                 required className="text-input" type="text" id="lws-thumbnail" name="thumbnail" />
                         </div>
 

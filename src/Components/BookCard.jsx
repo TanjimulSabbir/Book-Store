@@ -3,24 +3,28 @@
 import { Link } from "react-router-dom";
 import StarRating from "./rating";
 import { useDeleteBookMutation } from "../Redux/Features/Api/apiSlice";
+import { useDispatch } from "react-redux";
+import { deleteBook } from "../Redux/Features/booksSlice";
 
 // eslint-disable-next-line react/prop-types
 function BookCard({ book }) {
     const { id, name, author, thumbnail, price, rating, featured } = book;
-    const [deleteBook, { data }] = useDeleteBookMutation();
+    // const [deleteBook, { data }] = useDeleteBookMutation();
+    const dispatch = useDispatch();
 
     const handleDelete = (id) => {
-        deleteBook(id)
+        dispatch(deleteBook(id))
     }
     return (
         <div className="book-card">
             <img className="h-[240px] w-[170px] object-cover"
-                src={thumbnail} alt="book" />
+                src={thumbnail && thumbnail} alt="book" />
             <div className="flex-1 h-full pr-2 pt-2 flex flex-col">
                 <div className="flex items-center justify-between">
-                    <span className={`lws-badge ${featured? "bg-yellow-600 text-black border-yellow-600" : "border-black"}`}>Featured</span>
+                    <span className={`lws-badge ${featured ? "bg-yellow-400 text-black border-yellow-400" : "border-black"}`}>Featured</span>
                     <div className="text-gray-500 space-x-2 flex">
-                        <Link className="lws-edit transition-all duration-500 hover:text-green-500" to={`/editbook/${id}`}>
+                        <Link className="lws-edit transition-all duration-500 hover:text-green-500" 
+                        to={`/editbook/${id}`}>
                             <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round"
                                     d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
